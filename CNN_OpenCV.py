@@ -678,7 +678,7 @@ def train_classifier(memmap_path, image_ids, bbox_dict, shard_id, prev_model_pat
         print(f"[Shard {shard_id}] Epoch {epoch+1} Loss: {avg_loss:.4f}, Accuracy: {acc*100:.2f}%")
 
     # Save checkpoint for chaining
-    out_path = os.path.join(ROOT, f"multi_item_model_shard_{shard_id}.pth")
+    out_path = os.path.join(ROOT, f"multi_item_model_shard_{shard_id}.pth") #<--change the name please
     torch.save(model.state_dict(), out_path)
     print(f"[Shard {shard_id}] ✅ Trained model saved to {out_path}")
 
@@ -794,6 +794,7 @@ for shard_id, shard_ids in enumerate(shards):
         print(f"[Shard {shard_id}] 🗑️ Deleted memmap")
 
 print("\n✅ Training complete: Stage 1 (food only) + Stage 2 (fine-tune with non_food)")
+
 
 
 
