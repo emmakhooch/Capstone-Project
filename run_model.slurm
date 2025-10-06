@@ -7,8 +7,8 @@
 #SBATCH --gres=gpu:1                   # Request 1 GPU (set to 2 if needed)
 #SBATCH --mem=64G                      # Memory (adjust if you see OOM)
 #SBATCH --time=24:00:00                # Walltime (hh:mm:ss)
-#SBATCH --output=/mnt/nfs-scratch/ECEN_403-404/nutrician_assistant/logs/slurm-%j.out        # Stdout log
-#SBATCH --error=/mnt/nfs-scratch/ECEN_403-404/nutrician_assistant/logs/slurm-%j.err         # Stderr log
+#SBATCH --output=/mnt/nfs-scratch/ECEN_403-404/nutrician_assistant/logs/slurm-%j.out        # Stdout log (change this file name)
+#SBATCH --error=/mnt/nfs-scratch/ECEN_403-404/nutrician_assistant/logs/slurm-%j.err         # Stderr log (change this file name)
 #SBATCH --mail-type=ALL                # Send email when job starts/ends/fails
 #SBATCH --mail-user=e_hooch@tamu.edu  # Replace with your TAMU email
 #SBATCH --qos=olympus-research-gpu           #Select QOS to use
